@@ -23,24 +23,10 @@ a {
 a:hover {
   color: #ffffff;
 }
-footer {
-  background-color: #222222;
-  color: #aaaaaa;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
 img {
   display: block;
   margin: auto;
   max-width: 100%;
-}
-.column {
-  margin: 0 auto; /* Center the column horizontally */
-  flex: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 400px;
 }
 .button {
   font-size: 20px;
@@ -120,27 +106,35 @@ img {
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: space-between; /* Distribute items evenly across the container */
 }
-
 .banned {
   width: calc(50% - 10px); /* Set width for each banned individual (minus margins) */
   margin-bottom: 20px;
   margin-top: 20px;
   box-sizing: border-box; /* Include padding and border in the width */
 }
-
 .banned img {
   max-width: 100%;
   height: auto;
 }
-
 .banned-info {
   padding: 10px;
   background-color: #f9f9f9;
 }
-
 .search-container input[type="text"] {
   width: 80%; /* Adjust the width as needed */
   padding: 10px; /* Adjust the padding as needed */
   font-size: 16px; /* Adjust the font size as needed */
 }
-
+footer {
+  background-color: #222222;
+  color: #aaaaaa;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.column {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 100px;
+}
