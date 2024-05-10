@@ -27,7 +27,8 @@ footer {
   background-color: #222222;
   color: #aaaaaa;
   text-align: center;
-
+  display: flex;
+  justify-content: space-between;
 }
 img {
   display: block;
