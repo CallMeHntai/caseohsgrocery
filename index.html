@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaseOh's Grocery</title>
+  <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+
+<header>
+  <h1>CaseOh's Grocery</h1>
+</header>
+
+<!-- Buttons for navigation -->
+<div class="buttons" style="text-align: center">
+  <button class="button" onclick="location.href='index.html'">Home Page</button>
+  <button class="button" onclick="location.href='sortiment.html'">Sortiment</button>
+  <button class="button" onclick="location.href='staff.html'">Staff</button>
+  <button class="button" onclick="location.href='blacklist.html'">Blacklist</button>
+</div>
+
+<!-- store image -->
+<img src="img\storee.png" alt="Store Image">
+
+<footer id="dynamicSection"></footer>
+
+<script>
+  // Load content dynamically using JavaScript
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('dynamicSection').innerHTML = html;
+    });
+</script>
+
+</body>
+</html>

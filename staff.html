@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaseOh's Grocery</title>
+  <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+
+<header>
+  <h1>CaseOh's Grocery</h1>
+</header>
+
+<!-- Buttons for navigation -->
+<div class="buttons" style="text-align: center">
+  <button class="button" onclick="location.href='index.html'">Home Page</button>
+  <button class="button" onclick="location.href='sortiment.html'">Sortiment</button>
+  <button class="button" onclick="location.href='staff.html'">Staff</button>
+  <button class="button" onclick="location.href='blacklist.html'">Blacklist</button>
+</div>
+
+<owner id="owner" class="owner">
+  <div class="owner">
+    <img src="img/Image.webp" alt="Owner">
+    <p>Name: CaseOh</p>
+    <p>Position: Owner</p>
+  </div>
+</owner>
+<!-- Staff section -->
+<section id="staff" class="staff">
+  <!-- Employee 1 -->
+  <div class="employee">
+    <img src="img/Tim.webp" alt="Employee 1">
+    <p>Name: Tim</p>
+    <p>Position: Cashier</p>
+    <p>Wage: $80/day</p>
+  </div>
+
+  <!-- Employee 2 -->
+  <div class="employee">
+    <img src="img/Slim.webp" alt="Employee 2">
+    <p>Name: Slim</p>
+    <p>Position: Cashier</p>
+    <p>Wage: $80/day</p>
+  </div>
+
+  <div class="employee">
+    <img src="img/Jim.webp" alt="Employee 3">
+    <p>Name: Jim</p>
+    <p>Position: Stocker</p>
+    <p>Wage: $90/day</p>
+  </div>
+
+  <div class="employee">
+    <img src="img/Quan.webp" alt="Employee 4">
+    <p>Name: Quan</p>
+    <p>Position: Stocker</p>
+    <p>Wage: $90/day</p>
+  </div>
+
+  <div class="employee">
+    <img src="img/Juan.webp" alt="Employee 5">
+    <p>Name: Juan</p>
+    <p>Position: Stocker</p>
+    <p>Wage: $90/day</p>
+  </div>
+
+  <!-- Add more employees as needed -->
+</section>
+
+<footer id="dynamicSection"></footer>
+
+<script>
+  // Load content dynamically using JavaScript
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('dynamicSection').innerHTML = html;
+    });
+</script>
+
+</body>
+</html>

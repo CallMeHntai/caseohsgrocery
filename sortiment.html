@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaseOh's Grocery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>CaseOh's Grocery</h1>
+</header>
+
+<!-- Buttons for navigation -->
+<div class="buttons" style="text-align: center">
+  <button class="button" onclick="location.href='index.html'">Home Page</button>
+  <button class="button" onclick="location.href='sortiment.html'">Sortiment</button>
+  <button class="button" onclick="location.href='staff.html'">Staff</button>
+  <button class="button" onclick="location.href='blacklist.html'">Blacklist</button>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container" style="text-align: center; margin-bottom: 20px; margin-top: 20px">
+  <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+</div>
+
+<p style="text-align: center">Note: As prices can change daily, these are only the average market prices to provide a better idea of costs.</p>
+
+<section id="dynamicSection"></section>
+
+<script>
+  // Load content dynamically using JavaScript
+  fetch('section.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('dynamicSection').innerHTML = html;
+    });
+</script>
+
+<footer id="dynamicSectionn"></footer>
+
+<script>
+  // Load content dynamically using JavaScript
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('dynamicSectionn').innerHTML = html;
+    });
+</script>
+
+<script>
+  function searchProducts() {
+    // Declare variables
+    var input, filter, products, product, productText, i;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    products = document.querySelectorAll('.product');
+
+    // Loop through all product items, and hide those that don't match the search query
+    for (i = 0; i < products.length; i++) {
+      product = products[i];
+      productText = product.textContent.toUpperCase(); // Concatenate all text content
+      // Check if the filter matches any part of the concatenated text
+      if (productText.includes(filter)) {
+        product.style.display = ''; // display the product if any part matches
+      } else {
+        product.style.display = 'none'; // hide the product if no match found
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
