@@ -115,6 +115,7 @@ img {
 .banned img {
   width: 400px;
   height: auto;
+  object-fit: contain;
 }
 .banned-info {
   padding: 10px;
